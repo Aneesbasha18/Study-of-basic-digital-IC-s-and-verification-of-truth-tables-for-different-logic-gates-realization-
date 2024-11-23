@@ -1,5 +1,5 @@
 # Name:Aneesbasha J
-# Register Number: 23003943
+# Register Number: 212223050006
 # Experiment Number 1 : Study of basic digital IC s and verification of truth tables for different logic gates realization
 ### AIM:
 To study about the different digital IC’s and to verify the truth table in Quartus for the basic logic gates using Verilog programming.
@@ -33,31 +33,42 @@ Y= A⊕B
 Ex-NOR gate The 'Exclusive-NOR' gate circuit does the opposite to the EX-OR gate. It will give a low output if either, but not both of its two inputs are high. The symbol is an EX-OR gate with a small circle on the output. The small circle represents inversion.
 Y= A⊕B
 
-Procedure Connect the supply (+5V) to the circuit Switch ON the main switch Press the switches for inputs “A” and “B”. The switch is ON state when 1 is pressed. The switch is OFF state when 0 is pressed. If the output is 1, then the bulb glows. Check all the gates following the same procedure.
+Procedure
+
+1. Type the program in Quartus software.
+
+2. Compile and run the program.
+
+3. Generate the RTL schematic and save the logic diagram.
+
+4. Create nodes for inputs and outputs to generate the timing diagram.
+
+5. For different input combinations generate the timing diagram.
 
 ### Program:
 ```
-module Prode3(a,b,y1,y2,y3,y4,y5,y6,y7);
+module exp1(a,b,f1,f2,f3,f4,f5,f6,f7);
 input a,b;
-output y1,y2,y3,y4,y5,y6,y7;
-and(y1,a,b);
-or(y2,a,b);
-not(y3,a);
-xor(y4,a,b);
-nand(y5,a,b);
-nor(y6,a,b);
-xnor(y7,a,b);
+output f1,f2,f3,f4,f5,f6,f7;
+assign f1=a&b;
+assign f2=a|b;
+assign f3=~a;
+assign f4=~f1;
+assign f5=~f2;
+assign f6=a^b;
+assign f7=~(a^b);
 endmodule
 ```
 ### RTL realization:
-![Flipflops RTL Viewer](https://github.com/Aneesbasha18/Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-/assets/154219883/dd19c7a2-16ed-4f7a-8f52-4a6d82f6faa3)
+![image](https://github.com/user-attachments/assets/bd078f90-d5be-400e-913f-e8c470419510)
 
 
 ### Truth table:
-![Flipflops Truth Table](https://github.com/Aneesbasha18/Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-/assets/154219883/8d03bc3d-e408-4326-bd65-5a6088397e5f)
+![image](https://github.com/user-attachments/assets/e90308f0-68ce-4511-b0fa-1239378f0631)
 
 ### Timing Diagram:
-![Flipflop Waveforms](https://github.com/Aneesbasha18/Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-/assets/154219883/6d0dffb7-a8a2-4730-8732-b60a00934d36)
+
+![image](https://github.com/user-attachments/assets/0b385ab3-c84b-4ac0-94ef-c8ccbce72e2c)
 
 ### Result:
-Thus the different digital IC’s are studied and the truth table for different logic gates are verified.
+Thus the truth table of logic gates in Quartus II using Verilog programming are studied, verified and executed successfully.
